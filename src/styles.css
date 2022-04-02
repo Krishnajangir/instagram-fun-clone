@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+.modal.fade .modal-dialog {
+  transform: translate3d(46%, 0, 0) !important;
+}
+.modal-dialog {
+  max-width: 49% !important;
+}
+/* This will hide the backdrop property of modal */
+.modal-backdrop {
+ opacity: 0 !important;
+}
+.modal {
+  top: 20px !important;
+}

@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+}
+.main-first-section {
+  width: 50%;
+  cursor: pointer;
+}
+.main .main-second-section {
+  width: 50%;
+}
+img {
+  width: 100%;
+}
+.card-prop {
+  margin: 3em;
+  border: 1px solid #8080802b;
+}
+.fa {
+  margin-left: 1em;
+  cursor: pointer;
+}
+.main--details {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+.main--details span {
+  font-weight: bold;
+}
+/*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+

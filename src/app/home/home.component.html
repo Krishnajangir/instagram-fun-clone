@@ -1,0 +1,35 @@
+<div class="main">
+  <div class="main-first-section">
+    <div *ngFor="let details of instaData" class="card-prop">
+    <mat-card (click)="open(mymodal , details)">
+      <img mat-card-image src={{details.Image}} alt="Photo of a Shiba Inu">
+      <mat-card-content class="main--details">
+        <p><span>Likes:</span> {{details.likes}}</p>
+        <p><span>Timestamp:</span> {{details.timestamp}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  </div>
+  <div class="main-second-section">
+    <ng-template class="modal fade right modal-dialog" #mymodal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Details</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <mat-card >
+          <img mat-card-image src={{selectedData.Image}} alt="Photo of a Shiba Inu">
+          <mat-card-content class="main--details">
+            <p><span>Likes:</span> {{selectedData.likes}}<i class="fa fa-heart" aria-hidden="true" (click)="increaseLikes(selectedData.likes)"></i></p>
+            <p><span>Timestamp:</span> {{selectedData.timestamp}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">close</button>
+      </div>
+    </ng-template>
+  </div>
+</div>
